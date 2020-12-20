@@ -1,9 +1,8 @@
 <?php
   if (isset($_GET['page'])) {
     $page = $_GET['page'];
-    include('Page/' . $page . '.php');
+    include('Page/' . $page);
   }
-  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +13,7 @@
   <title>Upload_file</title>
 </head>
 <body>
-<button class="btndang" onclick="window.location.href='index.php?page=about'">About</button>
+<button class="btndang" onclick="window.location.href='index.php?page=about.php'">About</button>
 <div id="imagePreview"></div>
   <form action="../Page/upload.php" method="POST" enctype="multipart/form-data">
     <input type="file" name="imgss" onchange="return review()" multiple>
